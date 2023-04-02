@@ -1,4 +1,6 @@
 # python3
+# Author: Aleksandrs Pučenkins 17.gr. 221RDB335
+
 
 def read_input():
     # this function needs to aquire input both from keyboard and file
