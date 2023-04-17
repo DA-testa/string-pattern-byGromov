@@ -1,7 +1,7 @@
 # python3
 # Author: Aleksandrs Pučenkins 17.gr. 221RDB335
 
-B = 29
+B = 15
 
 def get_hash(text: str) -> int:
     text_len = len(text)
@@ -9,19 +9,19 @@ def get_hash(text: str) -> int:
     hash = 0
 
     for i in range(text_len):
-        hash += ord(text[i]) * B ** (text_len - i) 
+        hash += ord(text[i]) * B**(text_len - i) 
     return hash
 
 def read_input():
-    in_type = input()
+    inputType = input()
 
-    while 'I' not in in_type or 'F' not in in_type:
-        if 'I' in in_type:
+    while 'I' not in inputType or 'F' not in inputType:
+        if 'I' in inputType:
             return (input().rstrip(), input().rsstrip())
-        elif 'F' in in_type:
+        elif 'F' in inputType:
             with open("./tests/06", "r") as file:
                 return(file.readline().rstrip(), file.readline().rstrip())
-        in_type = input()
+        inputType = input()
 
 def print_occurrences(output):
     # this function should control output, it doesn't need any return
@@ -41,6 +41,7 @@ def get_occurrences(pattern, text):
         if pattern_hash == text_part_hash:
             if pattern == text_part:
                 occurrences.append(i)
+
     return occurrences 
 
 
