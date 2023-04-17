@@ -1,7 +1,16 @@
 # python3
 # Author: Aleksandrs Pučenkins 17.gr. 221RDB335
 
+B = 29
 
+def get_hash(text: str) -> int:
+    text_len = len(text)
+
+    hash = 0
+
+    for i in range(text_len):
+        hash += ord(text[i]) * B ** (text_len - i) 
+    return hash
 
 def read_input():
     in_type = input()
