@@ -1,7 +1,7 @@
 # python3
 # Author: Aleksandrs Pučenkins 17.gr. 221RDB335
 
-B = 13
+B = 29
 
 def get_hash(text: str) -> int:
     text_len = len(text)
@@ -13,15 +13,15 @@ def get_hash(text: str) -> int:
     return hash
 
 def read_input():
-    inputType = input()
+    in_type = input()
 
-    while 'I' not in inputType or 'F' not in inputType:
-        if 'I' in inputType:
-            return (input().rstrip(), input().rsstrip())
-        elif 'F' in inputType:
+    while 'I' not in in_type or 'F' not in in_type:
+        if 'I' in in_type:
+            return (input().rstrip(), input().rstrip())
+        elif 'F' in in_type:
             with open("./tests/06", "r") as file:
                 return(file.readline().rstrip(), file.readline().rstrip())
-        inputType = input()
+        in_type = input()
 
 def print_occurrences(output):
     # this function should control output, it doesn't need any return
