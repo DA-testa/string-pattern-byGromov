@@ -1,7 +1,7 @@
 # python3
 # Author: Aleksandrs Pučenkins 17.gr. 221RDB335
 
-B = 15
+B = 13
 
 def get_hash(text: str) -> int:
     text_len = len(text)
